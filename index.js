@@ -27,28 +27,28 @@ function playGame(playerMove){
   const computerMove= pickComputerMove();
   let result= '';
 
-  if(playerMove === 'Rock'){
-        if(computerMove === 'Rock'){
+  if(playerMove === 'rock'){
+        if(computerMove === 'rock'){
           result='Tie';
-        }else if(computerMove === 'Paper'){
+        }else if(computerMove === 'paper'){
           result='Lose';
-        }else if(computerMove === 'Scissors'){
+        }else if(computerMove === 'scissors'){
           result='Win';
         }
-  }else if(playerMove === 'Paper'){
-        if(computerMove === 'Rock'){
+  }else if(playerMove === 'paper'){
+        if(computerMove === 'rock'){
           result='Win';
-        }else if(computerMove === 'Paper'){
+        }else if(computerMove === 'paper'){
           result='Tie';
-        }else if(computerMove === 'Scissors'){
+        }else if(computerMove === 'scissors'){
           result='Lose';
         }
-  }else if(playerMove === 'Scissors'){
-        if(computerMove === 'Rock'){
+  }else if(playerMove === 'scissors'){
+        if(computerMove === 'rock'){
           result='Lose';
-        }else if(computerMove === 'Paper'){
+        }else if(computerMove === 'paper'){
           result='Win';
-        }else if(computerMove === 'Scissors'){
+        }else if(computerMove === 'scissors'){
           result='Tie';
         }          
   }
@@ -94,11 +94,11 @@ function pickComputerMove(){
   let computerMove= "";
 
   if(randomNum>=0 && randomNum<= 1/3){
-    computerMove= 'Rock';
+    computerMove= 'rock';
   }else if(randomNum>=1/3 && randomNum<= 2/3){
-    computerMove= 'Paper';
+    computerMove= 'paper';
   }else if(randomNum>=2/3 && randomNum<= 1){
-    computerMove= 'Scissors';
+    computerMove= 'scissors';
   }
 
   return computerMove;
@@ -106,11 +106,11 @@ function pickComputerMove(){
 
 document.body.addEventListener('keydown',(event)=>{
   if(event.key === "r" || event.key === "R"){
-    playGame("Rock");
+    playGame("rock");
   }else  if(event.key === "p" || event.key === "P"){
-    playGame("Paper");
+    playGame("paper");
   }else if(event.key === "s" || event.key === "S"){
-    playGame("Scissors");
+    playGame("scissors");
   }else if(event.key === "a" || event.key === "A"){
     autoPlay();
   }
